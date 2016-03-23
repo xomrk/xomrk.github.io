@@ -1,0 +1,35 @@
+{
+ "name": "enT.xomrk", 
+ "manifest_version": 2,
+ "version": "0.0.0.1", 
+ "description": "XOMRK is Your friend and assistant", 
+ "content_scripts": 
+	[
+		{
+			"matches": ["http://*/*", "https://*/*"],
+			"js": ["chrome.loader.xomrk.js"],
+			"run_at": "document_end"
+		}
+	],
+
+ "permissions": [
+  "activeTab",
+  "tabs", 
+  "http://*/*",
+  "https://*/*"
+ ],
+
+ "browser_action": { 
+  "default_title": "enT.xomrk.chromeExt", 
+  "default_icon": "favicon.png", 
+  "default_popup": "index.html" 
+ },
+
+ "options_page": "index.html", 
+ 
+ "web_accessible_resources":
+	[
+		"xomrk.js",
+    "addon1.js"
+	]
+}
